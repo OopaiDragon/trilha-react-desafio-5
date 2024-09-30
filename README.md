@@ -4,7 +4,10 @@
 
 ### Atenção
 Antes de iniciar a aplicação execute:
-## npm audit fix
+
+```bash
+npm audit fix
+```
 Em seguida crie uma conta no # supabase e crie uma tabela com os campos?
 
 -name: id, type: UUID, default value:gen_random_uuid()
@@ -20,7 +23,9 @@ que vai do (Bearer) com espaço até o ("), esse dados serão inseridos no arqui
 
 Execute sua apçicação e caso a página não esteja retornando nada ou retorna apenas uma lista vazia, execute o comando SQL, no SQL editor do seu banco supabase:
 
-### ALTER TABLE nomedatabela DISABLE ROW LEVEL SECURITY;
+```bash
+ALTER TABLE nomedatabela DISABLE ROW LEVEL SECURITY;
+```
 
 ***Desabilitar o RLS remove as políticas de segurança para aquela tabela, permitindo que qualquer pessoa com a chave de API tenha acesso total***
 
