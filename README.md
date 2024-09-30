@@ -2,6 +2,29 @@
 
 [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/nextjs-blog-theme)
 
+### Atenção
+Antes de iniciar a aplicação execute:
+## npm audit fix
+Em seguida crie uma conta no # supabase e crie uma tabela com os campos?
+
+-name: id, type: UUID, default value:gen_random_uuid()
+-name: title, type: varchar
+-name: description, type: text
+-name: created_at, type: timestamptz, default value: now()
+-body: id, type: text
+
+Após criado, no menu lataral selecione API docs, selecione seu banco, selecione bash > Project API key : public
+Seu base id sera ate v1, ira precisar tambem de sua apikey que vai dos (:) ate (") e tambem o authorization,
+que vai do (Bearer) com espaço até o ("), esse dados serão inseridos no arquivo api.js que esta no caminho:
+"services/api.js" do projeto.
+
+Execute sua apçicação e caso a página não esteja retornando nada ou retorna apenas uma lista vazia, execute o comando SQL, no SQL editor do seu banco supabase:
+
+### ALTER TABLE nomedatabela DISABLE ROW LEVEL SECURITY;
+
+***Desabilitar o RLS remove as políticas de segurança para aquela tabela, permitindo que qualquer pessoa com a chave de API tenha acesso total***
+
+Agora ao reiniciar a aplicação, seus dados 
 A customizable blog starter using:
 
 - [Next.js](https://github.com/vercel/next.js) v12
