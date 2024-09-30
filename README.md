@@ -23,8 +23,8 @@ Execute sua apçicação e caso a página não esteja retornando nada ou retorna
 ### ALTER TABLE nomedatabela DISABLE ROW LEVEL SECURITY;
 
 ***Desabilitar o RLS remove as políticas de segurança para aquela tabela, permitindo que qualquer pessoa com a chave de API tenha acesso total***
+Agora ao reiniciar a aplicação, seus dados serão carregados normalmente.
 
-Agora ao reiniciar a aplicação, seus dados 
 A customizable blog starter using:
 
 - [Next.js](https://github.com/vercel/next.js) v12
